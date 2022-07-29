@@ -11,16 +11,21 @@ import java.util.function.Consumer;
 public class GlobalConsumerConfig {
     @Bean
     public Consumer<String> userConsumer() {
-        return (msg) -> log.info("Received message: {}", msg);
+        return (msg) -> log.info("USER - Received message: {}", msg);
     }
 
     @Bean
     public Consumer<String> articleConsumer() {
-        return (msg) -> log.info("Received message: {}", msg);
+        return (msg) -> log.info("ARTICLE - Received message: {}", msg);
     }
 
     @Bean
     public Consumer<String> commentConsumer() {
-        return (msg) -> log.info("Received message: {}", msg);
+        return (msg) -> log.info("COMMENT - Received message: {}", msg);
+    }
+
+    @Bean
+    public Consumer<String> emailConsumer() {
+        return (msg) -> log.info("EMAIL - Received message: {}", msg);
     }
 }
